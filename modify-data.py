@@ -1,5 +1,6 @@
 already = []
 Wcount = 0
+Scount = 1
 arr = []
 
 
@@ -25,14 +26,14 @@ def BIO_Tag(templine, already):
 
 def add_parent_name(arr):
     for i in range(0, Wcount):
-        temp = arr[i][6]
+        temp = arr[i][7]
         if temp == '0':
-            arr[i][6] = 'root'
+            arr[i][7] = 'root'
         else:
             for j in range(0, Wcount):
-                temp2 = arr[j][0]
+                temp2 = arr[j][1]
                 if temp2 == temp:
-                    arr[i][6] = arr[j][1]
+                    arr[i][7] = arr[j][2]
 
 
 with open('hdtb_development_wx.conll') as f:
@@ -44,9 +45,11 @@ with open('hdtb_development_wx.conll') as f:
             print('\n')
             already = []
             Wcount = 0
+            Scount += 1
             arr = []
         else:  # Normal Line
             templine = line.split('\t')
             BIO_Tag(templine, already)
+            templine = [str(Scount)] + templine
             arr.append(templine)
             Wcount += 1
