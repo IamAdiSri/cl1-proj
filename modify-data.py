@@ -36,10 +36,42 @@ def add_parent_name(arr):
                     arr[i][7] = arr[j][2]
 
 
-with open('hdtb_development_wx.conll') as f:
+def final_form_arr(arr):
+    temp1 = arr[7]
+    temp2 = arr[8]
+    temp3 = arr[9]
+    temp4 = arr[10]
+    # print(temp1,temp2,temp3,temp4)
+    features_array = arr[6]
+    features_split = features_array.split('|')
+    # print(features_split)
+    num_features = len(features_split)
+    index = 6
+    for j in range(0,num_features):
+        put = features_split[j].split('-')
+        final = put[1]
+        # print(final)
+        # print('index is',index)
+        if index > 10:
+            arr.insert(index,final)
+        else:
+            arr[index] = final
+        index += 1
+    arr.insert(index,temp1)
+    index += 1
+    arr.insert(index, temp2)
+    index += 1
+    arr.insert(index, temp3)
+    index += 1
+    arr.insert(index, temp4)
+
+
+with open('test.txt') as f:
     for line in f:
         if line in ['\n', '\r\n']:  # Blank Line
             add_parent_name(arr)
+            for i in range(0,Wcount):
+                final_form_arr(arr[i])
             for i in range(0, Wcount):
                 print(arr[i])
             print('\n')
