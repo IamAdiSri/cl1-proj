@@ -1,0 +1,19 @@
+1	malloM	mallA	n	NN	cat-n|gen-m|num-pl|pers-3|case-o|vib-0_kA|tam-0|chunkId-NP|chunkType-head|stype-|voicetype-	3	r6	_	_
+2	kI	kA	psp	PSP	cat-psp|gen-f|num-sg|pers-|case-d|vib-|tam-|chunkId-NP|chunkType-child|stype-|voicetype-	1	lwg__psp	_	_
+3	rAjaXAnI	rAjaXAnI	n	NN	cat-n|gen-f|num-sg|pers-3|case-d|vib-0|tam-0|chunkId-NP2|chunkType-head|stype-|voicetype-	4	k1	_	_
+4	hone	ho	v	VM	cat-v|gen-m|num-any|pers-any|case-o|vib-nA_ke_kAraNa|tam-nA|chunkId-VGNN|chunkType-head|stype-|voicetype-	14	rh	_	_
+5	ke	ke	psp	PSP	cat-psp|gen-m|num-|pers-|case-o|vib-|tam-|chunkId-VGNN|chunkType-child|stype-|voicetype-	4	lwg__psp	_	_
+6	kAraNa	kAraNa	n	PSP	cat-n|gen-m|num-|pers-|case-o|vib-|tam-|chunkId-VGNN|chunkType-child|stype-|voicetype-	4	lwg__psp	_	_
+7	prAcInakAla	prAcInakAla	n	NN	cat-n|gen-m|num-sg|pers-3|case-o|vib-0_meM|tam-0|chunkId-NP3|chunkType-head|stype-|voicetype-	14	k7t	_	_
+8	meM	meM	psp	PSP	cat-psp|gen-|num-|pers-|case-|vib-|tam-|chunkId-NP3|chunkType-child|stype-|voicetype-	7	lwg__psp	_	_
+9	isa	yaha	pn	DEM	cat-pn|gen-any|num-sg|pers-3|case-o|vib-|tam-|chunkId-NP4|chunkType-child|stype-|voicetype-	10	nmod__adj	_	_
+10	sWAna	sWAna	n	NN	cat-n|gen-m|num-sg|pers-3|case-o|vib-0_kA|tam-0|chunkId-NP4|chunkType-head|stype-|voicetype-	13	r6	_	_
+11	kA	kA	psp	PSP	cat-psp|gen-m|num-sg|pers-|case-d|vib-|tam-|chunkId-NP4|chunkType-child|stype-|voicetype-	10	lwg__psp	_	_
+12	awyaMwa	awyaMwa	adj	JJ	cat-adj|gen-any|num-any|pers-|case-d|vib-|tam-|chunkId-NP5|chunkType-child|stype-|voicetype-	13	nmod__adj	_	_
+13	mahawva	mahawva	n	NN	cat-n|gen-m|num-sg|pers-3|case-d|vib-0|tam-0|chunkId-NP5|chunkType-head|stype-|voicetype-	14	k1	_	_
+14	WA	WA	v	VM	cat-v|gen-m|num-sg|pers-any|case-|vib-WA|tam-WA|chunkId-VGF|chunkType-head|stype-declarative|voicetype-active	0	main	_	_
+15	.	.	punc	SYM	cat-punc|gen-|num-|pers-|case-|vib-|tam-|chunkId-BLK|chunkType-head|stype-|voicetype-	14	rsym	_	_
+
+1	prAcInakAla	prAcInakAla	n	NN	cat-n|gen-m|num-sg|pers-3|case-o|vib-0_kA|tam-0|chunkId-NP|chunkType-head|stype-|voicetype-	4	r6	_	_
+2	ke	kA	psp	PSP	cat-psp|gen-m|num-pl|pers-|case-o|vib-|tam-|chunkId-NP|chunkType-child|stype-|voicetype-	1	lwg__psp	_	_
+
