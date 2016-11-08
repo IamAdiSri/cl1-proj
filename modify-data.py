@@ -41,17 +41,13 @@ def final_form_arr(arr):
     temp2 = arr[8]
     temp3 = arr[9]
     temp4 = arr[10]
-    # print(temp1,temp2,temp3,temp4)
     features_array = arr[6]
     features_split = features_array.split('|')
-    # print(features_split)
     num_features = len(features_split)
     index = 6
     for j in range(0,num_features):
         put = features_split[j].split('-')
         final = put[1]
-        # print(final)
-        # print('index is',index)
         if index > 10:
             arr.insert(index,final)
         else:
