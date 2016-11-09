@@ -1,7 +1,26 @@
+from __future__ import print_function
+import mysql.connector
+
 already = []
 Wcount = 0
 Scount = 1
 arr = []
+
+cnx = mysql.connector.connect(user='root', password='gotham', host='localhost', database='test_cl')
+cursor = cnx.cursor()
+print("Connected!")
+
+
+def dump(arr):
+    add_data = (
+        "INSERT INTO dump (Sid, Wid, form, lemma, cpos, pos, category, gender, number, person, cas, vibh, tam, chunkid, chunktype, stype, voicetype, parent, drel)"
+        "VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+    )
+    arr.remove(arr[19])
+    arr.remove(arr[19])
+    data_test = tuple(arr)
+    cursor.execute(add_data, data_test, False)
+    cnx.commit()
 
 
 def BIO_Tag(templine, already):
@@ -45,15 +64,17 @@ def final_form_arr(arr):
     features_split = features_array.split('|')
     num_features = len(features_split)
     index = 6
-    for j in range(0,num_features):
+    for j in range(0, num_features):
         put = features_split[j].split('-')
         final = put[1]
+        if final == '':
+            final = '-'
         if index > 10:
-            arr.insert(index,final)
+            arr.insert(index, final)
         else:
             arr[index] = final
         index += 1
-    arr.insert(index,temp1)
+    arr.insert(index, temp1)
     index += 1
     arr.insert(index, temp2)
     index += 1
@@ -66,8 +87,9 @@ with open('test.txt') as f:
     for line in f:
         if line in ['\n', '\r\n']:  # Blank Line
             add_parent_name(arr)
-            for i in range(0,Wcount):
+            for i in range(0, Wcount):
                 final_form_arr(arr[i])
+                dump(arr[i])
             for i in range(0, Wcount):
                 print(arr[i])
             print('\n')
@@ -81,3 +103,6 @@ with open('test.txt') as f:
             templine = [str(Scount)] + templine
             arr.append(templine)
             Wcount += 1
+
+cursor.close()
+cnx.close()
