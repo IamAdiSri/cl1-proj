@@ -13,7 +13,7 @@ print("Connected!")
 
 def dump(arr):
     add_data = (
-        "INSERT INTO dump (Sid, Wid, form, lemma, cpos, pos, category, gender, number, person, cas, vibh, tam, chunkid, chunktype, stype, voicetype, parent, drel)"
+        "INSERT INTO hdtb (Sid, Wid, form, lemma, cpos, pos, category, gender, number, person, cas, vibh, tam, chunkid, chunktype, stype, voicetype, parent, drel)"
         "VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
     )
     arr.remove(arr[19])
@@ -86,7 +86,7 @@ def final_form_arr(arr):
 with open('test.txt') as f:
     for line in f:
         if line in ['\n', '\r\n']:  # Blank Line
-            add_parent_name(arr)
+            #add_parent_name(arr)
             for i in range(0, Wcount):
                 final_form_arr(arr[i])
                 dump(arr[i])
